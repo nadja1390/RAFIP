@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Regenerative Agrcultural Management &#8212; Regenerative Almond Assesment Analysis</title>
+    <title>Regenerative Agricultural Management &#8212; Regenerative Almond Assesment Analysis</title>
   
   
   
@@ -180,7 +180,7 @@
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regenerative Agrcultural Management</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Regenerative Agricultural Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Climate_resilience.html">Climate Resilience</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Orchard_Water_Use.html">Almond Orchard Water Use</a></li>
 </ul>
@@ -368,7 +368,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Regenerative Agrcultural Management</h1>
+    <h1>Regenerative Agricultural Management</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -379,6 +379,7 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cover-cropping-in-almond-farms">Cover cropping in Almond Farms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-almond-cover-crop">Example Almond Cover Crop</a></li>
 </ul>
             </nav>
         </div>
@@ -390,31 +391,258 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="regenerative-agrcultural-management">
-<h1>Regenerative Agrcultural Management<a class="headerlink" href="#regenerative-agrcultural-management" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="regenerative-agricultural-management">
+<h1>Regenerative Agricultural Management<a class="headerlink" href="#regenerative-agricultural-management" title="Link to this heading">#</a></h1>
 <section id="cover-cropping-in-almond-farms">
 <h2>Cover cropping in Almond Farms<a class="headerlink" href="#cover-cropping-in-almond-farms" title="Link to this heading">#</a></h2>
 <p>Include literature here and create an example</p>
+<ul class="simple">
+<li><p>Remote Sensing Applications in Almond Orchards: A Comprehensive Systematic Review of Current Insights, Research Gaps, and Future Prospects <code class="docutils literal notranslate"><span class="pre">{cite}`app14051749`</span></code></p></li>
+</ul>
+<p>Conducted an extensive literature review where w¡one section focusses on Remote Sensing applications. Some interesting conclusions are:</p>
+<ul class="simple">
+<li><p>Zarate-Valdez et al. [35] focused on predicting the leaf area index (LAI) in almond orchards using VIs derived from Landsat imagery. The results show that the EVI is the most accurate index for predicting LAI, with an R2 of 0.78.</p></li>
+<li><p>Sandonís-Pozo et al. [36] used satellite data to estimate geometric and structural parameters. Results showed that NDVI and GNDVI had the strongest correlations with geometric and
+structural parameters.</p></li>
+<li><p>Caras et al. [45] used RS techniques to study the impact of weed management on almond tree growth, employing UAVs with MSP cameras for data collection. Their research evaluated practices such as ground covers, mulches, and herbicides, identifying the most effective approach as combining pre-emergent herbicides and ground cover, resulting in
+higher almond yields and improved quality parameters.</p></li>
+</ul>
+</section>
+<section id="example-almond-cover-crop">
+<h2>Example Almond Cover Crop<a class="headerlink" href="#example-almond-cover-crop" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ion</span><span class="p">()</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import data</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
+<span class="n">path_to_data_folder</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="s1">&#39;Data</span><span class="se">\\</span><span class="s1">Idanha</span><span class="se">\\</span><span class="s1">NDVI_NDWI_TimeSeries.csv&#39;</span><span class="p">)</span> <span class="c1"># cloud coverage: 20 percent</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path_to_data_folder</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">rcParams</span><span class="p">,</span> <span class="n">cycler</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                      system:index  NDVI_mean  NDVI_stdDev  \
+date                                                                         
+2017-06-04  20170604T112121_20170604T112755_T29TPE   0.364744     0.181027   
+2017-07-04  20170704T112111_20170704T112431_T29TPE   0.332643     0.222045   
+2017-07-14  20170714T112111_20170714T112114_T29TPE   0.334903     0.218720   
+2017-07-24  20170724T112121_20170724T112433_T29TPE   0.319249     0.216016   
+2017-08-03  20170803T112121_20170803T112850_T29TPE   0.310498     0.218386   
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+            NDWI_mean  NDWI_stdDev                                    .geo  
+date                                                                        
+2017-06-04  -0.123722     0.148454  {&quot;type&quot;:&quot;MultiPoint&quot;,&quot;coordinates&quot;:[]}  
+2017-07-04  -0.151268     0.181173  {&quot;type&quot;:&quot;MultiPoint&quot;,&quot;coordinates&quot;:[]}  
+2017-07-14  -0.150343     0.188324  {&quot;type&quot;:&quot;MultiPoint&quot;,&quot;coordinates&quot;:[]}  
+2017-07-24  -0.152932     0.182292  {&quot;type&quot;:&quot;MultiPoint&quot;,&quot;coordinates&quot;:[]}  
+2017-08-03  -0.168406     0.186491  {&quot;type&quot;:&quot;MultiPoint&quot;,&quot;coordinates&quot;:[]}  
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#clean data</span>
+
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>system:index</th>
+      <th>NDVI_mean</th>
+      <th>NDVI_stdDev</th>
+      <th>NDWI_mean</th>
+      <th>NDWI_stdDev</th>
+      <th>.geo</th>
+    </tr>
+    <tr>
+      <th>date</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2017-06-04</th>
+      <td>20170604T112121_20170604T112755_T29TPE</td>
+      <td>0.364744</td>
+      <td>0.181027</td>
+      <td>-0.123722</td>
+      <td>0.148454</td>
+      <td>{"type":"MultiPoint","coordinates":[]}</td>
+    </tr>
+    <tr>
+      <th>2017-07-04</th>
+      <td>20170704T112111_20170704T112431_T29TPE</td>
+      <td>0.332643</td>
+      <td>0.222045</td>
+      <td>-0.151268</td>
+      <td>0.181173</td>
+      <td>{"type":"MultiPoint","coordinates":[]}</td>
+    </tr>
+    <tr>
+      <th>2017-07-14</th>
+      <td>20170714T112111_20170714T112114_T29TPE</td>
+      <td>0.334903</td>
+      <td>0.218720</td>
+      <td>-0.150343</td>
+      <td>0.188324</td>
+      <td>{"type":"MultiPoint","coordinates":[]}</td>
+    </tr>
+    <tr>
+      <th>2017-07-24</th>
+      <td>20170724T112121_20170724T112433_T29TPE</td>
+      <td>0.319249</td>
+      <td>0.216016</td>
+      <td>-0.152932</td>
+      <td>0.182292</td>
+      <td>{"type":"MultiPoint","coordinates":[]}</td>
+    </tr>
+    <tr>
+      <th>2017-08-03</th>
+      <td>20170803T112121_20170803T112850_T29TPE</td>
+      <td>0.310498</td>
+      <td>0.218386</td>
+      <td>-0.168406</td>
+      <td>0.186491</td>
+      <td>{"type":"MultiPoint","coordinates":[]}</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>2024-11-09</th>
+      <td>20241109T112209_20241109T112454_T29TPE</td>
+      <td>0.056390</td>
+      <td>0.042585</td>
+      <td>0.012909</td>
+      <td>0.033664</td>
+      <td>{"type":"MultiPoint","coordinates":[]}</td>
+    </tr>
+    <tr>
+      <th>2024-12-04</th>
+      <td>20241204T112441_20241204T112440_T29TPE</td>
+      <td>0.392110</td>
+      <td>0.120807</td>
+      <td>0.087816</td>
+      <td>0.123811</td>
+      <td>{"type":"MultiPoint","coordinates":[]}</td>
+    </tr>
+    <tr>
+      <th>2024-12-09</th>
+      <td>20241209T112359_20241209T112443_T29TPE</td>
+      <td>0.398897</td>
+      <td>0.121261</td>
+      <td>0.065916</td>
+      <td>0.126348</td>
+      <td>{"type":"MultiPoint","coordinates":[]}</td>
+    </tr>
+    <tr>
+      <th>2024-12-24</th>
+      <td>20241224T112501_20241224T112502_T29TPE</td>
+      <td>0.385458</td>
+      <td>0.122048</td>
+      <td>0.056136</td>
+      <td>0.127151</td>
+      <td>{"type":"MultiPoint","coordinates":[]}</td>
+    </tr>
+    <tr>
+      <th>2024-12-29</th>
+      <td>20241229T112409_20241229T112722_T29TPE</td>
+      <td>0.382971</td>
+      <td>0.120096</td>
+      <td>0.077608</td>
+      <td>0.128827</td>
+      <td>{"type":"MultiPoint","coordinates":[]}</td>
+    </tr>
+  </tbody>
+</table>
+<p>255 rows × 6 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add the standard deviation as a shaded region</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;NDVI_mean&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;NDVI_stdDev&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;NDVI_mean&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;NDVI_stdDev&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkgreen&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Std Deviation&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;NDVI_mean&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkgreen&#39;</span><span class="p">)</span>
+
+<span class="c1"># set labels:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;NDVI regional signal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;NDVI [-]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time [Years]&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/4904681cfa4d419d102931b58672a2f7d78f8bc7c68b3f0b2aa0cb64e9c9172a.png" src="_images/4904681cfa4d419d102931b58672a2f7d78f8bc7c68b3f0b2aa0cb64e9c9172a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;NDWI_mean&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;NDWI_stdDev&quot;</span><span class="p">],</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;NDWI_mean&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;NDWI_stdDev&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkblue&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Std Deviation&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;NDWI_mean&quot;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkblue&#39;</span><span class="p">)</span>
+
+<span class="c1"># set labels:</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;NDWI regional signal&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;NDWI [-]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time [Years]&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/096d6911eb37e0092905222c9bfceec780e77847d689184c6410d83bb1ebf57b.png" src="_images/096d6911eb37e0092905222c9bfceec780e77847d689184c6410d83bb1ebf57b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -439,6 +667,9 @@ document.write(`
 <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">custom_lines</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;Cold&#39;</span><span class="p">,</span> <span class="s1">&#39;Medium&#39;</span><span class="p">,</span> <span class="s1">&#39;Hot&#39;</span><span class="p">]);</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/440c2c5eaa1a1f9bece48ac88cd594b982cdb747edad8d296afc51ed3d2088c9.png" src="_images/440c2c5eaa1a1f9bece48ac88cd594b982cdb747edad8d296afc51ed3d2088c9.png" />
 </div>
 </div>
 <p>There is a lot more that you can do with outputs (such as including interactive outputs)
@@ -511,6 +742,7 @@ with your book. For more information about this, see <a class="reference externa
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cover-cropping-in-almond-farms">Cover cropping in Almond Farms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-almond-cover-crop">Example Almond Cover Crop</a></li>
 </ul>
   </nav></div>
 
