@@ -1,6 +1,6 @@
 # Welcome!
 
-In this Jupyter Notebook we start the development of an assessment tool aimed at exploring water efficiency dynamics in almond orchards in Portugal and Spain. The initial tasks will involve:
+In this Jupyter Book we start the development of an assessment tool aimed at exploring water efficiency dynamics in almond orchards in Portugal and Spain. The initial tasks will involve:
 - Project scoping and definition
 - Reviewing and integrating ground truth and historical data
 - Exploration and identification of viable open-source data sets (Sentinel, Landsat, etc.) to support the development of functional algorithms
