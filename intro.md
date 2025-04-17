@@ -7,7 +7,7 @@ In this Jupyter Book we start the development of an assessment tool aimed at exp
 
 The analysis will use the following framework to go through different topics and asses their viability to develop tools or integrate modules into a general framework. 
 
-```{image} Overview.png
+```{image} Overview.PNG
 :alt: Overview of assessment for Regenerative Amond Farming
 :width: 600px
 :align: center
