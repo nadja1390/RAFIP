@@ -15,8 +15,8 @@ latex:
   latex_documents:
     targetname: book.tex
 
-parse:
-  myst_enable_extensions:
+#parse:
+#  myst_enable_extensions:
 #    - citations
 
 language: en
