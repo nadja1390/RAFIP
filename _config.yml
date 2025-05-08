@@ -17,7 +17,9 @@ latex:
 
 parse:
   myst_enable_extensions:
-    - citations
+#    - citations
+
+language: en
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
