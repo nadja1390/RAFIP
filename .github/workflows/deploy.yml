@@ -22,8 +22,8 @@ jobs:
         run: |
           pip install -U jupyter-book ghp-import
 
-      - name: Downgrade snowballstemmer to restore 'porter'
-        run: pip install snowballstemmer==2.1.0
+      - name: Pin snowballstemmer to 2.2.0 (needed for 'porter')
+        run: pip install snowballstemmer==2.2.0
 
       - name: Build the book
         run: jupyter-book build .
