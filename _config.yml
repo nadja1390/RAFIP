@@ -21,7 +21,7 @@ latex:
 
 sphinx:
   config:
-    language: None
+    html_search_language: 'en'
 
 # Add a bibtex file so that we can create citations
 bibtex_bibfiles:
