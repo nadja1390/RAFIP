@@ -1,0 +1,1406 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Almond Orchard Water Use &#8212; Regenerative Almond Assesment Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Orchard_Water_Use';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Quantifying Growth variability" href="growth_variablity.html" />
+    <link rel="prev" title="Quantifying Orchard Resilience" href="Climate_resilience.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Verrio.png" class="logo__image only-light" alt="Regenerative Almond Assesment Analysis - Home"/>
+    <script>document.write(`<img src="_static/Verrio.png" class="logo__image only-dark" alt="Regenerative Almond Assesment Analysis - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Regenerative_Ag_Man.html">Regenerative Agricultural Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Climate_resilience.html">Quantifying Orchard Resilience</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Almond Orchard Water Use</a></li>
+<li class="toctree-l1"><a class="reference internal" href="growth_variablity.html">Quantifying Growth variability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Datasets.html">Available Open Datasets</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/nadja1390/RAFIP" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/nadja1390/RAFIP/issues/new?title=Issue%20on%20page%20%2FOrchard_Water_Use.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Orchard_Water_Use.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Almond Orchard Water Use</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-will-do-here">What we will do here</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snippets-of-technical-report-portugal-nuts">Snippets of TECHNICAL REPORT - Portugal Nuts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-evapotranspiration">Reference evapotranspiration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precipitation-and-ndvi-data">Precipitation and NDVI data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#static-crop-factors">Static Crop Factors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexible-crop-factors">Flexible Crop Factors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#field-level-irrigation-requirements-and-evapotranspiration">Field level irrigation requirements and evapotranspiration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#on-the-irrigation-quota">On the irrigation quota</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actual-crop-evapotranspiration">Actual crop evapotranspiration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interesting-articles">Interesting articles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agronomic-response-transpiration-and-water-productivity-of-four-almond-production-systems-under-different-irrigation-regimes">Agronomic response, transpiration and water productivity of four almond production systems under different irrigation regimes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#establishing-an-almond-water-production-function-for-california-using-longterm-yield-response-to-variable-irrigation">Establishing an almond water production function for California using long‑term yield response to variable irrigation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-continue-with-orchard-water-use">How to continue with Orchard Water Use?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="almond-orchard-water-use">
+<h1>Almond Orchard Water Use<a class="headerlink" href="#almond-orchard-water-use" title="Link to this heading">#</a></h1>
+<section id="what-we-will-do-here">
+<h2>What we will do here<a class="headerlink" href="#what-we-will-do-here" title="Link to this heading">#</a></h2>
+<p>In this section we will propose a methodology to estimate Reference Evapotranspiration (ETref), Maximum crop or potential evapotranspiration (ETc) and actual evapotranspiration (ETa). There are ET products available, but they need to be tweeked to Almond cultivation or do not have the right temporal or spatial resolution. To compute actual evapotranspiration it could be worthwhile to consult thermal/ energy balance products in the future (<a class="reference external" href="https://www.usgs.gov/landsat-missions/landsat-collection-2-provisional-actual-evapotranspiration-science-product">Example</a>). For now we follow on an optical based algortihm to get at least ETref, ETc, and potentially ETa for case study fields. We do this to get an idea of the necessary building blocks. Here a short definition of these terms:</p>
+<ul class="simple">
+<li><p>ETref (Reference Evapotranspiration): This is the evapotranspiration rate from a well-watered, uniform reference surface (typically grass or alfalfa). It reflects the climate demand (influenced by temperature, wind, humidity, radiation) and is used as a baseline for estimating crop water needs. The reference surface is a hypothetical grass reference crop with an assumed crop height of 0.12 m, a fixed surface resistance of 70 s/m and an albedo of 0.23. The reference surface closely resembles an extensive surface of green, well-watered grass of uniform height, actively growing and completely shading the ground. The fixed surface resistance of 70 s/m implies a moderately dry soil surface resulting from about a weekly irrigation frequency. <a class="reference external" href="https://www.weap21.org/webhelp/Mabia_Alg_ETRef.htm#:~:text=Reference%20crop%20evapotranspiration%20or%20reference,m%20and%20an%20albedo%20of">Click for full formula and explanation</a></p></li>
+<li><p>ETc (Crop Evapotranspiration): This is the potential water use of a specific crop under ideal (well-watered) conditions. It is calculated by multiplying ETref by crop-specific coefficients that account for canopy size, growth stage, and irrigation design.</p></li>
+<li><p>Actual ET: This is the real water loss from a crop under actual conditions, which may be lower than ETc due to water stress, disease, or poor irrigation.</p></li>
+</ul>
+<figure class="align-default" id="directive-fig">
+<a class="reference internal image-reference" href="_images/methodology_evaporation.PNG"><img alt="_images/methodology_evaporation.PNG" src="_images/methodology_evaporation.PNG" style="height: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">The methodology we use here is a simplified version of the one proposed by den Besten et al, 2020</span><a class="headerlink" href="#directive-fig" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="snippets-of-technical-report-portugal-nuts">
+<h2>Snippets of TECHNICAL REPORT - Portugal Nuts<a class="headerlink" href="#snippets-of-technical-report-portugal-nuts" title="Link to this heading">#</a></h2>
+<p>The report determines the water requirements of tree nut crops in the main production areas of Portugal</p>
+<ul class="simple">
+<li><p>The intensification of almond production in Portugal is a recent phenomenon, as the acreage of new intensive plantations has gone from less than 2.000 ha in 2014 to more than 26.000 ha in 2020. Irrigation is indispensable to achieve high productivity in Portugal. (maybe give a calculation)</p></li>
+<li><p>Methodology used: After determining ETc, the net irrigation requirements are computed based on the effective rainfall and the water
+budget of the crop root zone. Such irrigation requirements are calculated for the different areas and for a period of 11 years over the last two decades to capture the temporal variability. They represent the net irrigation demand needed to achieve maximum production in an average year.</p></li>
+<li><p>Maximum Kc values are typically reached on July-August, ranging from 0.95 to 1.10. However, more recent data from California suggests that almond Kc maximum values of mature orchards irrigated with microsprinklers may reach values as high as 1.2 (Goldhamer &amp; Girona, 2012). High Kc values, close to 1.2, have been also reported in Australia (Stevens et al., 2011). Higher Kc values are likely due to the increase in planting densities in recent plantations, larger tree canopies due to less annual pruning, and higher fruit loads. Additionally, more frequent soil wetting due to high-frequency irrigation can also increase direct soil surface evaporation which may also contribute to high Kc values. With this background, the almond crop coefficients used here are based on direct ETc field measurements conducted during 10 years in Córdoba, Spain, using a weighing lysimeter installed in 2009 (the only weighing lysimeter of almond in the world until recently), as reported in three consecutive doctoral theses (i.e., Espadafor, 2015; López-López, 2018 and Moldero, 2021).</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="_images/crop_factors.PNG"><img alt="_images/crop_factors.PNG" src="_images/crop_factors.PNG" style="height: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5 </span><span class="caption-text">Crop factors used</span><a class="headerlink" href="#id1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>the optimal deficit irrigation program for almond should prioritize supplying the full ETc in the following periods:</p>
+<ol class="arabic simple">
+<li><p>Fruit set and early canopy growth (normally achieved if the winter had normal rainfall and the soil is fully charged at flowering)</p></li>
+<li><p>Post-harvest period when the floral buds of the following season are formed. Normally, a month duration after harvest is considered minimum, then some water deficits may be applied later, as the end of the season approaches.</p></li>
+<li><p>Severe water deficits should be always avoided; ETa should not be below 50% of ETc throughout the season.</p></li>
+</ol>
+<figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="_images/almond_irrigation_requirement.PNG"><img alt="_images/almond_irrigation_requirement.PNG" src="_images/almond_irrigation_requirement.PNG" style="height: 300px;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 6 </span><span class="caption-text">70 percent canopy over orchard (CC=70%) (López-López et al., 2018)</span><a class="headerlink" href="#id2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="reference-evapotranspiration">
+<h2>Reference evapotranspiration<a class="headerlink" href="#reference-evapotranspiration" title="Link to this heading">#</a></h2>
+<p>Daily Reference ET (df_ETref) – daily, 30 km (I think it is Penmann Monteith) data from: <a class="reference external" href="https://data.apps.fao.org/wapor/?lang=en">https://data.apps.fao.org/wapor/?lang=en</a> for Rota Única Farm to start with</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+
+
+<span class="c1"># Load ETref</span>
+<span class="n">df_ETref</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;Data/Evaporation&#39;</span><span class="p">,</span> <span class="s1">&#39;Ref_ET.csv&#39;</span><span class="p">),</span>
+    <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+    <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;ETref&#39;</span><span class="p">],</span>
+    <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span>
+    <span class="n">decimal</span><span class="o">=</span><span class="s1">&#39;,&#39;</span>
+<span class="p">)</span>
+<span class="n">df_ETref</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_ETref</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df_ETref</span> <span class="o">=</span> <span class="n">df_ETref</span><span class="p">[</span><span class="o">~</span><span class="n">df_ETref</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)]</span>
+
+<span class="c1"># Load Precipitation</span>
+<span class="n">df_prec</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;Data/Evaporation&#39;</span><span class="p">,</span> <span class="s1">&#39;CHIRPS_Daily_Precipitation.csv&#39;</span><span class="p">),</span>
+    <span class="n">index_col</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+    <span class="n">header</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+<span class="n">df_prec</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_prec</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df_prec</span> <span class="o">=</span> <span class="n">df_prec</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;precip_mm&#39;</span><span class="p">:</span> <span class="s1">&#39;Precip&#39;</span><span class="p">})</span>  <span class="c1"># Optional: rename for clarity</span>
+
+<span class="n">df_prec</span> <span class="o">=</span> <span class="n">df_prec</span><span class="p">[</span><span class="o">~</span><span class="n">df_prec</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)]</span>
+<span class="n">df_prec</span> <span class="o">=</span> <span class="n">df_prec</span><span class="p">[[</span><span class="s1">&#39;Precip&#39;</span><span class="p">]]</span>
+
+<span class="c1"># Load NDVI</span>
+<span class="n">df_ndvi</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;Data/extended&#39;</span><span class="p">,</span> <span class="s1">&#39;NDVI_TimeSeries_PerFeature_ext_vc2.csv&#39;</span><span class="p">),</span>
+    <span class="n">index_col</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span>
+    <span class="n">header</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+<span class="n">df_ndvi</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df_ndvi</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<span class="n">df_ndvi</span> <span class="o">=</span> <span class="n">df_ndvi</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;NDVI_mean&#39;</span><span class="p">:</span> <span class="s1">&#39;NDVI&#39;</span><span class="p">})</span> <span class="k">if</span> <span class="s1">&#39;NDVI_mean&#39;</span> <span class="ow">in</span> <span class="n">df_ndvi</span><span class="o">.</span><span class="n">columns</span> <span class="k">else</span> <span class="n">df_ndvi</span>
+<span class="n">df_ndvi</span> <span class="o">=</span> <span class="n">df_ndvi</span><span class="p">[[</span><span class="s1">&#39;NDVI&#39;</span><span class="p">]]</span> <span class="k">if</span> <span class="s1">&#39;NDVI&#39;</span> <span class="ow">in</span> <span class="n">df_ndvi</span><span class="o">.</span><span class="n">columns</span> <span class="k">else</span> <span class="n">df_ndvi</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
+<span class="n">df_ndvi</span> <span class="o">=</span> <span class="n">df_ndvi</span><span class="p">[</span><span class="o">~</span><span class="n">df_ndvi</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">duplicated</span><span class="p">(</span><span class="n">keep</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)]</span>
+<span class="n">df_ndvi</span> <span class="o">=</span> <span class="n">df_ndvi</span><span class="p">[[</span><span class="s1">&#39;NDVI&#39;</span><span class="p">]]</span>
+
+<span class="c1"># Merge all on the date index</span>
+<span class="n">df_merged</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_ETref</span><span class="p">,</span> <span class="n">df_prec</span><span class="p">,</span> <span class="n">df_ndvi</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Sort index (optional but tidy)</span>
+<span class="n">df_merged</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+
+<span class="c1"># interpolate NDVI</span>
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;NDVI&#39;</span><span class="p">][</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;NDVI&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.1</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;NDVI&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;NDVI&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">interpolate</span><span class="p">()</span>
+
+<span class="c1"># select focus</span>
+<span class="n">df_merged</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;2018-01-01&#39;</span><span class="p">:</span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">]</span>
+
+<span class="n">df_merged</span>
+<span class="c1"># Final preview</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># === Plot NDVI time series with min/max around median ===</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+
+
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;ETref&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkcyan&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
+
+<span class="c1"># Loop through each year and color the background for March to September</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;ETref&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;ETref&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">start_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">-03-01&#39;</span><span class="p">)</span>  <span class="c1"># March 1st of the year</span>
+    <span class="n">end_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">-09-15&#39;</span><span class="p">)</span>   <span class="c1"># September 30th of the year</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;mediumseagreen&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Labels and legend</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Daily reference evaporation (ET ref)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Date&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;ET ref [mm/day]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+
+<span class="c1"># === Show plot ===</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/42f57121e85c635982f80399c9899224393616cd600a34df8039c1fccf5436da.png" src="_images/42f57121e85c635982f80399c9899224393616cd600a34df8039c1fccf5436da.png" />
+</div>
+</div>
+</section>
+<section id="precipitation-and-ndvi-data">
+<h2>Precipitation and NDVI data<a class="headerlink" href="#precipitation-and-ndvi-data" title="Link to this heading">#</a></h2>
+<p>We got precipitation data from CHIRPS and NDVI data from S2 (this will can used for the Crop Factors at a next stage)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># === Plot NDVI time series with min/max around median ===</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Loop through each year and color the background for March to September</span>
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+    <span class="n">start_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">-03-01&#39;</span><span class="p">)</span>  <span class="c1"># March 1st of the year</span>
+    <span class="n">end_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timestamp</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">-09-15&#39;</span><span class="p">)</span>   <span class="c1"># September 30th of the year</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axvspan</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;mediumseagreen&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+
+<span class="c1"># Line plots for </span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;NDVI&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;NDVI x10&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;ETref&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ETref&#39;</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Dekadal evaporation [mm/day]&#39;</span><span class="p">)</span>
+<span class="c1"># ax1.legend(loc=&#39;upper left&#39;)</span>
+
+<span class="c1"># Secondary y-axis for Precipitation (plotted as a bar plot, top-down)</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="o">-</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Precip&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;precipitation&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Precipitation (inverted)&#39;</span><span class="p">)</span>
+<span class="c1"># ax2.legend(loc=&#39;upper right&#39;)</span>
+
+<span class="c1"># Optional: make sure the precipitation legend appears</span>
+<span class="n">lines</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span>
+<span class="n">lines2</span><span class="p">,</span> <span class="n">labels2</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">lines</span> <span class="o">+</span> <span class="n">lines2</span><span class="p">,</span> <span class="n">labels</span> <span class="o">+</span> <span class="n">labels2</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Timeseries with Precipitation as Inverted Bar Plot&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/11f3b214441200875f236bfcc87d1b285d9e9737b1a29ca531253d6c6c9d21e4.png" src="_images/11f3b214441200875f236bfcc87d1b285d9e9737b1a29ca531253d6c6c9d21e4.png" />
+</div>
+</div>
+<section id="static-crop-factors">
+<h3>Static Crop Factors<a class="headerlink" href="#static-crop-factors" title="Link to this heading">#</a></h3>
+<p>An example with static crop factors…</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define Kc values by month</span>
+<span class="n">kc_by_month</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="mf">0.30</span><span class="p">,</span>  <span class="mi">2</span><span class="p">:</span> <span class="mf">0.30</span><span class="p">,</span>  <span class="mi">3</span><span class="p">:</span> <span class="mf">0.40</span><span class="p">,</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="mf">0.60</span><span class="p">,</span>  <span class="mi">5</span><span class="p">:</span> <span class="mf">0.80</span><span class="p">,</span>  <span class="mi">6</span><span class="p">:</span> <span class="mf">0.90</span><span class="p">,</span>
+    <span class="mi">7</span><span class="p">:</span> <span class="mf">0.90</span><span class="p">,</span>  <span class="mi">8</span><span class="p">:</span> <span class="mf">0.85</span><span class="p">,</span>  <span class="mi">9</span><span class="p">:</span> <span class="mf">0.70</span><span class="p">,</span>
+    <span class="mi">10</span><span class="p">:</span> <span class="mf">0.50</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span> <span class="mf">0.30</span><span class="p">,</span> <span class="mi">12</span><span class="p">:</span> <span class="mf">0.30</span>
+<span class="p">}</span>
+
+<span class="c1"># Add Kc values by mapping the month from the &#39;date&#39; column</span>
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Kc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">kc_by_month</span><span class="p">)</span>
+
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;ETc&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;ETref&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Kc&#39;</span><span class="p">]</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            ETref    Precip      NDVI   Kc   ETc
+2018-01-01    0.6   0.00000  0.203622  0.3  0.18
+2018-01-02    0.6   0.00000  0.206655  0.3  0.18
+2018-01-03    0.7   0.00000  0.209688  0.3  0.21
+2018-01-04    0.6  14.90844  0.212722  0.3  0.18
+2018-01-05    0.6   0.00000  0.215755  0.3  0.18
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="c1"># Gridlines go to the back</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Secondary y-axis for Precipitation (top-down bar plot)</span>
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+<span class="c1"># Gridlines go to the back</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_axisbelow</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">ax2</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Precip&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Precipitation&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Invert y-axis so bars go top-down, but show positive tick labels</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Precipitation [mm]&#39;</span><span class="p">)</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">([</span><span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">label</span><span class="p">))</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">ax2</span><span class="o">.</span><span class="n">get_yticks</span><span class="p">()])</span>
+
+<span class="c1"># Line plots for ETref, ETc, Kc</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;ETref&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ETref&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;ETc&#39;</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ETc&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Kc&#39;</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Kc x10&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Evapotranspiration [mm/day]&#39;</span><span class="p">)</span>
+
+<span class="c1"># Legends</span>
+<span class="n">lines1</span><span class="p">,</span> <span class="n">labels1</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span>
+<span class="n">lines2</span><span class="p">,</span> <span class="n">labels2</span> <span class="o">=</span> <span class="n">ax2</span><span class="o">.</span><span class="n">get_legend_handles_labels</span><span class="p">()</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">lines1</span> <span class="o">+</span> <span class="n">lines2</span><span class="p">,</span> <span class="n">labels1</span> <span class="o">+</span> <span class="n">labels2</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper right&#39;</span><span class="p">)</span>
+
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Timeseries with Precipitation as Inverted Bar Plot&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\ici-1\AppData\Local\Temp\ipykernel_4292\2378865283.py:18: UserWarning: set_ticklabels() should only be used with a fixed number of ticks, i.e. after set_ticks() or using a FixedLocator.
+  ax2.set_yticklabels([abs(int(label)) for label in ax2.get_yticks()])
+</pre></div>
+</div>
+<img alt="_images/31b7369c8ec8619a402eb7489e305ede4a3fb7219a2017eba8b653e7772dff85.png" src="_images/31b7369c8ec8619a402eb7489e305ede4a3fb7219a2017eba8b653e7772dff85.png" />
+</div>
+</div>
+</section>
+<section id="flexible-crop-factors">
+<h3>Flexible Crop Factors<a class="headerlink" href="#flexible-crop-factors" title="Link to this heading">#</a></h3>
+<p>Here we use the study of Portugal Nuts to get to flexible crop factors that can be used to calculate the potential Orchard Water Use.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_etc</span><span class="p">(</span><span class="n">eto</span><span class="p">,</span> <span class="n">cc</span><span class="p">,</span> <span class="n">fw</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">F</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculate crop evapotranspiration (ETc) for almond orchards.</span>
+
+<span class="sd">    Parameters:</span>
+<span class="sd">    - eto: Reference evapotranspiration (ETo)</span>
+<span class="sd">    - cc: Canopy cover (0-1 scale, e.g., 0.7 for 70%)</span>
+<span class="sd">    - fw: Fraction of wet soil surface (typically 0.15)</span>
+<span class="sd">    - month: Integer month (1=January, ..., 12=December)</span>
+<span class="sd">    - F: Monthly fraction of rainy days (0-1)</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">    - etc: Crop evapotranspiration (ETc)</span>
+<span class="sd">    - Kt: Transpiration coefficient</span>
+<span class="sd">    - Kg: Wetted soil evaporation coefficient</span>
+<span class="sd">    - Ks: Dry soil evaporation coefficient</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Check if within irrigation period (April to October)</span>
+    <span class="n">is_irrigation_period</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">&lt;=</span> <span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">9</span>
+
+    <span class="c1"># Kg component: evaporation from wetted soil surface</span>
+    <span class="k">if</span> <span class="n">is_irrigation_period</span><span class="p">:</span>
+        <span class="n">intercepted_radiation_factor</span> <span class="o">=</span> <span class="mf">1.2</span>
+        <span class="n">Kg</span> <span class="o">=</span> <span class="mf">1.4</span> <span class="o">*</span> <span class="mf">0.15</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">1.6</span> <span class="o">*</span> <span class="n">cc</span> <span class="o">*</span> <span class="n">intercepted_radiation_factor</span><span class="p">)</span> <span class="o">*</span> <span class="n">fw</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">Kg</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Ks component: evaporation from dry soil surface</span>
+    <span class="k">if</span> <span class="n">is_irrigation_period</span> <span class="ow">and</span> <span class="n">eto</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">Ks</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.28</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.18</span> <span class="o">*</span> <span class="n">cc</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mf">0.03</span> <span class="o">*</span> <span class="n">eto</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mf">3.8</span> <span class="o">*</span> <span class="n">F</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">F</span><span class="p">)</span> <span class="o">/</span> <span class="n">eto</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">fw</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">Ks</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Kt component: tree transpiration</span>
+    <span class="k">if</span> <span class="n">month</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>  <span class="c1"># Dormant period</span>
+        <span class="n">Kt</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># Compute Kt peak based on canopy cover</span>
+        <span class="k">if</span> <span class="mf">0.3</span> <span class="o">&lt;</span> <span class="n">cc</span> <span class="o">&lt;</span> <span class="mf">0.5</span><span class="p">:</span>
+            <span class="n">Kt_peak</span> <span class="o">=</span> <span class="mf">1.5</span> <span class="o">*</span> <span class="n">cc</span>
+        <span class="k">elif</span> <span class="mf">0.5</span> <span class="o">&lt;=</span> <span class="n">cc</span> <span class="o">&lt;</span> <span class="mf">0.8</span><span class="p">:</span>
+            <span class="n">Kt_peak</span> <span class="o">=</span> <span class="mf">0.75</span> <span class="o">+</span> <span class="p">(</span><span class="n">cc</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">Kt_peak</span> <span class="o">=</span> <span class="mi">0</span>
+
+        <span class="k">if</span> <span class="n">month</span> <span class="o">==</span> <span class="mi">3</span><span class="p">:</span>
+            <span class="n">Kt</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">Kt_peak</span>
+        <span class="k">elif</span> <span class="n">month</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">11</span><span class="p">]:</span>
+            <span class="n">Kt</span> <span class="o">=</span> <span class="mf">0.7</span> <span class="o">*</span> <span class="n">Kt_peak</span>
+        <span class="k">elif</span> <span class="n">month</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span>
+            <span class="n">Kt</span> <span class="o">=</span> <span class="mf">0.9</span> <span class="o">*</span> <span class="n">Kt_peak</span>
+        <span class="k">elif</span> <span class="mi">6</span> <span class="o">&lt;=</span> <span class="n">month</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">:</span>
+            <span class="n">Kt</span> <span class="o">=</span> <span class="n">Kt_peak</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">Kt</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="c1"># Final ETc calculation</span>
+    <span class="n">etc</span> <span class="o">=</span> <span class="n">eto</span> <span class="o">*</span> <span class="p">(</span><span class="n">Kt</span> <span class="o">+</span> <span class="n">Kg</span> <span class="o">+</span> <span class="n">Ks</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">etc</span><span class="p">,</span> <span class="n">Kt</span><span class="p">,</span> <span class="n">Kg</span><span class="p">,</span> <span class="n">Ks</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># get rainy day fraction (F)</span>
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span>
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span>
+
+<span class="c1"># Define rainy day threshold (e.g., 1 mm)</span>
+<span class="n">rain_threshold</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+<span class="c1"># Create a binary indicator for rainy days</span>
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;IsRainyDay&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Precip&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">rain_threshold</span>
+
+<span class="c1"># Group by year and month and calculate rainy day fraction</span>
+<span class="n">monthly_rainy_fraction</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_merged</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Month&#39;</span><span class="p">])[</span><span class="s1">&#39;IsRainyDay&#39;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">([</span><span class="s1">&#39;sum&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;sum&#39;</span><span class="p">:</span> <span class="s1">&#39;RainyDays&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">:</span> <span class="s1">&#39;TotalDays&#39;</span><span class="p">})</span>
+<span class="p">)</span>
+<span class="n">monthly_rainy_fraction</span><span class="p">[</span><span class="s1">&#39;RainyDaysFraction&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">monthly_rainy_fraction</span><span class="p">[</span><span class="s1">&#39;RainyDays&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">monthly_rainy_fraction</span><span class="p">[</span><span class="s1">&#39;TotalDays&#39;</span><span class="p">]</span>
+
+<span class="n">original_index</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">index</span>  <span class="c1"># Save current index</span>
+<span class="c1"># Merge back into original dataframe</span>
+<span class="n">df_merged</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span>
+    <span class="n">monthly_rainy_fraction</span><span class="p">[</span><span class="s1">&#39;RainyDaysFraction&#39;</span><span class="p">],</span>
+    <span class="n">on</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Month&#39;</span><span class="p">],</span>
+    <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span>
+<span class="p">)</span>
+<span class="n">df_merged</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">original_index</span>  <span class="c1"># Restore original index</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            ETref    Precip      NDVI   Kc   ETc  Year  Month  IsRainyDay  \
+2018-01-01    0.6   0.00000  0.203622  0.3  0.18  2018      1       False   
+2018-01-02    0.6   0.00000  0.206655  0.3  0.18  2018      1       False   
+2018-01-03    0.7   0.00000  0.209688  0.3  0.21  2018      1       False   
+2018-01-04    0.6  14.90844  0.212722  0.3  0.18  2018      1        True   
+2018-01-05    0.6   0.00000  0.215755  0.3  0.18  2018      1       False   
+
+            RainyDaysFraction  
+2018-01-01            0.16129  
+2018-01-02            0.16129  
+2018-01-03            0.16129  
+2018-01-04            0.16129  
+2018-01-05            0.16129  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example DataFrame</span>
+<span class="c1"># Columns: ETo, Month, F (fraction of rainy days)</span>
+<span class="c1"># Constants</span>
+<span class="n">cc</span> <span class="o">=</span> <span class="mf">0.7</span> <span class="c1"># this may be turned flexible (maximum canopy cover)</span>
+<span class="n">fw</span> <span class="o">=</span> <span class="mf">0.15</span> <span class="c1"># depends on irrigation type</span>
+
+<span class="c1"># Apply row-wise</span>
+<span class="n">df_merged</span><span class="p">[[</span><span class="s1">&#39;ETc_2&#39;</span><span class="p">,</span> <span class="s1">&#39;Kt&#39;</span><span class="p">,</span> <span class="s1">&#39;Kg&#39;</span><span class="p">,</span> <span class="s1">&#39;Ks&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">row</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">calculate_etc</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;ETref&#39;</span><span class="p">],</span> <span class="n">cc</span><span class="p">,</span> <span class="n">fw</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;RainyDaysFraction&#39;</span><span class="p">])),</span>
+    <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span>
+
+<span class="n">df_merged</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ETref</th>
+      <th>Precip</th>
+      <th>NDVI</th>
+      <th>Kc</th>
+      <th>ETc</th>
+      <th>Year</th>
+      <th>Month</th>
+      <th>IsRainyDay</th>
+      <th>RainyDaysFraction</th>
+      <th>ETc_2</th>
+      <th>Kt</th>
+      <th>Kg</th>
+      <th>Ks</th>
+      <th>Kc_2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2018-01-01</th>
+      <td>0.6</td>
+      <td>0.00000</td>
+      <td>0.203622</td>
+      <td>0.3</td>
+      <td>0.18</td>
+      <td>2018</td>
+      <td>1</td>
+      <td>False</td>
+      <td>0.16129</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2018-01-02</th>
+      <td>0.6</td>
+      <td>0.00000</td>
+      <td>0.206655</td>
+      <td>0.3</td>
+      <td>0.18</td>
+      <td>2018</td>
+      <td>1</td>
+      <td>False</td>
+      <td>0.16129</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2018-01-03</th>
+      <td>0.7</td>
+      <td>0.00000</td>
+      <td>0.209688</td>
+      <td>0.3</td>
+      <td>0.21</td>
+      <td>2018</td>
+      <td>1</td>
+      <td>False</td>
+      <td>0.16129</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2018-01-04</th>
+      <td>0.6</td>
+      <td>14.90844</td>
+      <td>0.212722</td>
+      <td>0.3</td>
+      <td>0.18</td>
+      <td>2018</td>
+      <td>1</td>
+      <td>True</td>
+      <td>0.16129</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2018-01-05</th>
+      <td>0.6</td>
+      <td>0.00000</td>
+      <td>0.215755</td>
+      <td>0.3</td>
+      <td>0.18</td>
+      <td>2018</td>
+      <td>1</td>
+      <td>False</td>
+      <td>0.16129</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Are there big differences?</span>
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Kc_2&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Kt&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Kg&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Ks&#39;</span><span class="p">]</span>
+
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">:</span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">][[</span><span class="s1">&#39;ETc&#39;</span><span class="p">,</span> <span class="s1">&#39;ETc_2&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;2024-01-01&#39;</span><span class="p">:</span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">][[</span><span class="s1">&#39;Kc&#39;</span><span class="p">,</span> <span class="s1">&#39;Kc_2&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Axes: &gt;
+</pre></div>
+</div>
+<img alt="_images/200caaefc55d5acf75013284658a3457a4873cff41bbdd5e7ab1314e0fa5f381.png" src="_images/200caaefc55d5acf75013284658a3457a4873cff41bbdd5e7ab1314e0fa5f381.png" />
+<img alt="_images/eca14d4b0db984effdcc130e1ce4be0dd6de74f4c5d65e7d916783f955fbaa03.png" src="_images/eca14d4b0db984effdcc130e1ce4be0dd6de74f4c5d65e7d916783f955fbaa03.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="field-level-irrigation-requirements-and-evapotranspiration">
+<h2>Field level irrigation requirements and evapotranspiration<a class="headerlink" href="#field-level-irrigation-requirements-and-evapotranspiration" title="Link to this heading">#</a></h2>
+<p>We now demonstrated how to get to maximum crop evaporation (or potential evaporation) specifically for Almonds. Finally, to measure the actual evapotranspiration you need to correct for the crop stress to estimate what is truly transpired on a day or during a growing season. However, for this exercise it is already interesting to calculate the ETc-Precipitation and compare it to the irrigation quota to get an estimate of the irrigation requirements and whether they met crop water demand to sustain maximum almond cultivation. And, of course, to get a feel if the current application rates and hydrological context are suitable to intensive almond production.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># water deficit:</span>
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Irrigation requirement&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;ETc&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Precip&#39;</span><span class="p">]</span>
+
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Irrigation requirement&#39;</span><span class="p">][</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Irrigation requirement&#39;</span><span class="p">]</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_merged</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            ETref    Precip      NDVI   Kc   ETc  Irrigation requirement
+2018-01-01    0.6   0.00000  0.203622  0.3  0.18                    0.18
+2018-01-02    0.6   0.00000  0.206655  0.3  0.18                    0.18
+2018-01-03    0.7   0.00000  0.209688  0.3  0.21                    0.21
+2018-01-04    0.6  14.90844  0.212722  0.3  0.18                    0.00
+2018-01-05    0.6   0.00000  0.215755  0.3  0.18                    0.18
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\ici-1\AppData\Local\Temp\ipykernel_13980\2941941847.py:4: FutureWarning: ChainedAssignmentError: behaviour will change in pandas 3.0!
+You are setting values through chained assignment. Currently this works in certain cases, but when using Copy-on-Write (which will become the default behaviour in pandas 3.0) this will never work to update the original DataFrame or Series, because the intermediate object on which we are setting values will behave as a copy.
+A typical example is when you are setting values in a column of a DataFrame, like:
+
+df[&quot;col&quot;][row_indexer] = value
+
+Use `df.loc[row_indexer, &quot;col&quot;] = values` instead, to perform the assignment in a single step and ensure this keeps updating the original `df`.
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+
+  df_merged[&#39;Irrigation requirement&#39;][df_merged[&#39;Irrigation requirement&#39;]&lt;0] = 0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;2022-01-01&#39;</span><span class="p">:</span><span class="s1">&#39;2022-12-31&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ETref                     1402.200000
+Precip                     789.874229
+NDVI                       135.539456
+Kc                         208.950000
+ETc                        982.665000
+Irrigation requirement     930.739178
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">year</span>
+<span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">month</span>
+
+<span class="c1"># Group by year and sum all other columns</span>
+<span class="n">yearly_sum</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">numeric_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Drop &#39;year&#39; column if it was included (can happen with some settings)</span>
+<span class="k">if</span> <span class="s1">&#39;year&#39;</span> <span class="ow">in</span> <span class="n">yearly_sum</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">yearly_sum</span> <span class="o">=</span> <span class="n">yearly_sum</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">yearly_sum</span><span class="p">)</span>
+<span class="c1"># Plot</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">yearly_sum</span><span class="p">[[</span><span class="s1">&#39;ETref&#39;</span><span class="p">,</span> <span class="s1">&#39;Precip&#39;</span><span class="p">,</span> <span class="s1">&#39;ETc&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;skyblue&#39;</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Yearly Sum of All Variables&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;mm/year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Variable&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       ETref      Precip        NDVI      Kc       ETc  \
+year                                                     
+2018  1204.8  822.138323   94.403365  208.95   857.395   
+2019  1357.3  589.891532  105.781049  208.95   960.390   
+2020  1332.1  816.661684  175.501365  209.25   941.400   
+2021  1355.4  631.388915  190.019055  208.95   949.110   
+2022  1402.2  789.874229  135.539456  208.95   982.665   
+2023  1450.1  623.845733  124.284762  208.95  1026.155   
+2024  1353.5  642.282514  127.042824  209.25   955.595   
+2025     1.2    0.000000    0.264528    0.30     0.360   
+
+      Irrigation requirement  month  
+year                                 
+2018              799.395307   2382  
+2019              900.382312   2382  
+2020              865.263936   2384  
+2021              874.669930   2382  
+2022              930.739178   2382  
+2023              973.655000   2382  
+2024              899.071078   2384  
+2025                0.360000      1  
+</pre></div>
+</div>
+<img alt="_images/d37374748b8c93fbb13889c085ff6afd0465bb1f4fff059666d65ff028111efd.png" src="_images/d37374748b8c93fbb13889c085ff6afd0465bb1f4fff059666d65ff028111efd.png" />
+</div>
+</div>
+<p>From the above graph we can see rainfall is not sufficient to meet maximum Almond Evapotranspiration</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter for months March (3) to September (9)</span>
+<span class="n">df_filtered</span> <span class="o">=</span> <span class="n">df_merged</span><span class="p">[(</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;month&#39;</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">)]</span>
+
+<span class="c1"># Group by year and sum values</span>
+<span class="n">yearly_sums</span> <span class="o">=</span> <span class="n">df_filtered</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;year&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">yearly_sums</span><span class="p">)</span>
+
+<span class="c1"># some example data</span>
+<span class="n">threshold</span> <span class="o">=</span> <span class="mi">570</span> <span class="c1">#mm/year irrigation requirement</span>
+
+<span class="c1"># split it up</span>
+<span class="n">above_threshold</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">yearly_sums</span><span class="p">[</span><span class="s1">&#39;Irrigation requirement&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">-</span> <span class="n">threshold</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">below_threshold</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">minimum</span><span class="p">(</span><span class="n">yearly_sums</span><span class="p">[</span><span class="s1">&#39;Irrigation requirement&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">threshold</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">above_threshold</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">below_threshold</span><span class="p">)</span>
+
+
+<span class="c1"># and plot it</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">yearly_sums</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">below_threshold</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;skyblue&quot;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">yearly_sums</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">above_threshold</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">,</span>
+        <span class="n">bottom</span><span class="o">=</span><span class="n">below_threshold</span><span class="p">)</span>
+
+<span class="c1"># horizontal line indicating the threshold</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">yearly_sums</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">yearly_sums</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()],</span> <span class="p">[</span><span class="n">threshold</span><span class="p">,</span> <span class="n">threshold</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Estimated irrigation requirement (mm/year)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   year   ETref      Precip        NDVI      Kc      ETc  \
+0  2018  1067.0  545.594551   60.517942  172.95  816.055   
+1  2019  1204.4  256.035674   40.938826  172.95  914.520   
+2  2020  1165.7  514.004143  112.036775  172.95  891.480   
+3  2021  1183.7  380.992369  134.141658  172.95  897.600   
+4  2022  1209.9  424.728669   94.161688  172.95  924.975   
+5  2023  1282.2  401.216579   86.578856  172.95  975.785   
+6  2024  1175.7  405.426155   91.752046  172.95  902.255   
+
+   Irrigation requirement  month  
+0              762.318553   1593  
+1              860.817417   1593  
+2              822.453936   1593  
+3              830.059930   1593  
+4              881.779178   1593  
+5              930.455000   1593  
+6              851.311078   1593  
+[192.31855292 290.81741745 252.45393641 260.05993014 311.77917821
+ 360.455      281.31107831]
+[570. 570. 570. 570. 570. 570. 570.]
+</pre></div>
+</div>
+<img alt="_images/88f55055a1f263e1694974b88c467233c48b65995544984786786199e3c91351.png" src="_images/88f55055a1f263e1694974b88c467233c48b65995544984786786199e3c91351.png" />
+</div>
+</div>
+</section>
+<section id="on-the-irrigation-quota">
+<h2>On the irrigation quota<a class="headerlink" href="#on-the-irrigation-quota" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The irrigation quota is 570 mm/ year (1 hectare) for Alqueva, if we extrapolate this to to Idanha-a-Nova we can estimate that with the available irrigation it is not possible to meet maximum almond evapotranspiration.</p></li>
+<li><p>However, after a field visit to Idanha-a-Nova in May 2025 we know the irrigation quota is not being controlled due to a outdated irrigation system and absence of flow meters in the system. The bigger orchards actually maintain a trackrecord on how much irrigation water they use and have installed several flow meters at the inlet of their fields.</p></li>
+<li><p>Almond farmers in Idanha-a-Nova have almost unlimited access to water and, therefore, water stress is not their biggest production issue at the moment</p></li>
+<li><p>The estimated irrigation requirement to meet maximum almond evapotranspiration is around 800 mm/year during the growing season (March-September)</p></li>
+<li><p>Sustainable water management or conservation management is of highest priority on field and basin level</p></li>
+<li><p>On irrigation techniques: All almond orchards we visited in Idanha-a-Nova used drip irrigation</p></li>
+</ul>
+</section>
+<section id="actual-crop-evapotranspiration">
+<h2>Actual crop evapotranspiration<a class="headerlink" href="#actual-crop-evapotranspiration" title="Link to this heading">#</a></h2>
+<p>To calculate the actual evapotranspiration we need to correct for crop stress to indicate how much water is actually evaporated (also an indication if irrigation is applied). There are multiple ways to include crop stress: by looking at the vegetation stress, or incorporating a rootzone water balance, or to get ETa directly from a energy balance model (e.g. SEBAL). For now we focus on calculating a stress factor on optical signals.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter for April (4) to October (10)</span>
+<span class="n">df_apr_oct</span> <span class="o">=</span> <span class="n">df_merged</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;2021-01-01&#39;</span><span class="p">:</span><span class="s1">&#39;2025-01-01&#39;</span><span class="p">][(</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df_merged</span><span class="p">[</span><span class="s1">&#39;Month&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)]</span>
+
+<span class="c1"># Plot grouped by Year</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="k">for</span> <span class="n">year</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">df_apr_oct</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">):</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">group</span><span class="p">[</span><span class="s1">&#39;NDVI&#39;</span><span class="p">],</span> <span class="n">group</span><span class="p">[</span><span class="s1">&#39;Kc_2&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">),</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;NDVI&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Kc_2&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Kc (flexible) vs NDVI (April–October)&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\ici-1\AppData\Local\Temp\ipykernel_4292\641371869.py:2: UserWarning: Boolean Series key will be reindexed to match DataFrame index.
+  df_apr_oct = df_merged.loc[&#39;2021-01-01&#39;:&#39;2025-01-01&#39;][(df_merged[&#39;Month&#39;] &gt;= 4) &amp; (df_merged[&#39;Month&#39;] &lt; 10)]
+</pre></div>
+</div>
+<img alt="_images/6c230ca4da8a3a3823764cf0317acbb817ed023ac24f64f4c6a9d5f0c0fd1a00.png" src="_images/6c230ca4da8a3a3823764cf0317acbb817ed023ac24f64f4c6a9d5f0c0fd1a00.png" />
+</div>
+</div>
+</section>
+<section id="interesting-articles">
+<h2>Interesting articles<a class="headerlink" href="#interesting-articles" title="Link to this heading">#</a></h2>
+<section id="agronomic-response-transpiration-and-water-productivity-of-four-almond-production-systems-under-different-irrigation-regimes">
+<h3>Agronomic response, transpiration and water productivity of four almond production systems under different irrigation regimes<a class="headerlink" href="#agronomic-response-transpiration-and-water-productivity-of-four-almond-production-systems-under-different-irrigation-regimes" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>In Spain, irrigated almond has become more popular during recent decades, rising from 4.7 % of cultivated land in 2005 to 26 % in 2023 (180,562 ha)</p></li>
+<li><p>In the particular case of the Segarra-Garrigues (Lleida, Spain) irrigation district, water rights for almonds in 2023 were established at 1350 m3 ha−1, which corresponded to a water restriction of around 80 % (6500 m3 ha−1 in full water allocation conditions) (ASG, 2023).</p></li>
+</ul>
+</section>
+<section id="establishing-an-almond-water-production-function-for-california-using-longterm-yield-response-to-variable-irrigation">
+<h3>Establishing an almond water production function for California using long‑term yield response to variable irrigation<a class="headerlink" href="#establishing-an-almond-water-production-function-for-california-using-longterm-yield-response-to-variable-irrigation" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;Data</span><span class="se">\\</span><span class="s1">WP</span><span class="se">\\</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;wp_almond.csv&#39;</span><span class="p">),</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_theme</span><span class="p">()</span>
+
+
+<span class="c1"># Create the plot</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_wp</span><span class="p">,</span>
+    <span class="n">x</span><span class="o">=</span><span class="s2">&quot;Mean Kernel Yield (kg/ha)&quot;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Water use (mm)&quot;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span>
+    <span class="n">size</span><span class="o">=</span><span class="s2">&quot;WP [kg/m3]&quot;</span><span class="p">,</span>
+    <span class="n">sizes</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">200</span><span class="p">),</span>
+    <span class="n">alpha</span><span class="o">=</span><span class="mf">0.85</span><span class="p">,</span>
+    <span class="n">ax</span><span class="o">=</span><span class="n">ax</span>
+<span class="p">)</span>
+
+<span class="c1"># Move the legend outside the plot (right side)</span>
+<span class="n">legend</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span>
+    <span class="n">bbox_to_anchor</span><span class="o">=</span><span class="p">(</span><span class="mf">1.05</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+    <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span>
+    <span class="n">borderaxespad</span><span class="o">=</span><span class="mi">0</span>
+<span class="p">)</span>
+
+<span class="c1"># Bold the legend subtitles</span>
+<span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">legend</span><span class="o">.</span><span class="n">get_texts</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">text</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Country&quot;</span><span class="p">,</span> <span class="s2">&quot;WP [kg/m3]&quot;</span><span class="p">]:</span>
+        <span class="n">text</span><span class="o">.</span><span class="n">set_weight</span><span class="p">(</span><span class="s2">&quot;bold&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3a6b9de4379ab25558a2859019c0e603c6efe7f5ef04d0d374edbbfd6179c5bf.png" src="_images/3a6b9de4379ab25558a2859019c0e603c6efe7f5ef04d0d374edbbfd6179c5bf.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="how-to-continue-with-orchard-water-use">
+<h2>How to continue with Orchard Water Use?<a class="headerlink" href="#how-to-continue-with-orchard-water-use" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A first rough field level water use estimate is viable with the data available</p></li>
+<li><p>Get clean field-level vegetation signals</p></li>
+<li><p>We can also create spatial ET maps if need be</p></li>
+<li><p>Future work: correct for Canopy Cover (fraction) and moisture stress –&gt; tree spacing is 6 x 4m on average (see ppt Portugal Nuts)</p></li>
+<li><p>Explore thermal products (Especially if in cover crops thermal data will be included in analysis)</p></li>
+<li><p>Idea to add: Water Productivity graph</p></li>
+<li><p>Get field level irrigation and ET data (weather station) or sm probes (to validate moisture stress)</p></li>
+<li><p>delve into literature on deficit irrigation and almond production: what are the numbers</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Climate_resilience.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Quantifying Orchard Resilience</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="growth_variablity.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Quantifying Growth variability</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-we-will-do-here">What we will do here</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#snippets-of-technical-report-portugal-nuts">Snippets of TECHNICAL REPORT - Portugal Nuts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference-evapotranspiration">Reference evapotranspiration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#precipitation-and-ndvi-data">Precipitation and NDVI data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#static-crop-factors">Static Crop Factors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flexible-crop-factors">Flexible Crop Factors</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#field-level-irrigation-requirements-and-evapotranspiration">Field level irrigation requirements and evapotranspiration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#on-the-irrigation-quota">On the irrigation quota</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#actual-crop-evapotranspiration">Actual crop evapotranspiration</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interesting-articles">Interesting articles</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#agronomic-response-transpiration-and-water-productivity-of-four-almond-production-systems-under-different-irrigation-regimes">Agronomic response, transpiration and water productivity of four almond production systems under different irrigation regimes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#establishing-an-almond-water-production-function-for-california-using-longterm-yield-response-to-variable-irrigation">Establishing an almond water production function for California using long‑term yield response to variable irrigation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-continue-with-orchard-water-use">How to continue with Orchard Water Use?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Agua Sabia for Verrio
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

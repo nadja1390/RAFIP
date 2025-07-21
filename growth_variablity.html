@@ -1,0 +1,1473 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quantifying Growth variability &#8212; Regenerative Almond Assesment Analysis</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'growth_variablity';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Available Open Datasets" href="Datasets.html" />
+    <link rel="prev" title="Almond Orchard Water Use" href="Orchard_Water_Use.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/Verrio.png" class="logo__image only-light" alt="Regenerative Almond Assesment Analysis - Home"/>
+    <script>document.write(`<img src="_static/Verrio.png" class="logo__image only-dark" alt="Regenerative Almond Assesment Analysis - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome!
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Regenerative_Ag_Man.html">Regenerative Agricultural Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Climate_resilience.html">Quantifying Orchard Resilience</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Orchard_Water_Use.html">Almond Orchard Water Use</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Quantifying Growth variability</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Datasets.html">Available Open Datasets</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/nadja1390/RAFIP" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/nadja1390/RAFIP/issues/new?title=Issue%20on%20page%20%2Fgrowth_variablity.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/growth_variablity.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Quantifying Growth variability</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="quantifying-growth-variability">
+<h1>Quantifying Growth variability<a class="headerlink" href="#quantifying-growth-variability" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">folium</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ipywidgets</span><span class="w"> </span><span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">widgets</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">branca.colormap</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">shapely</span><span class="w"> </span><span class="kn">import</span> <span class="n">wkt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#import data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;c:\Users\ici-1\Desktop\NADJA\Verrio\almond_water_use_data\output\basis_for_growth_stability.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;Unnamed: 0.1&#39;, &#39;OBJECTID&#39;, &#39;CUL_CAMPAN&#39;, &#39;CUL_ID_x&#39;, &#39;OSA_ID&#39;,
+       &#39;Shape_Leng&#39;, &#39;Shape_Area&#39;, &#39;layer&#39;, &#39;path&#39;, &#39;geometry&#39;, &#39;Unnamed: 0&#39;,
+       &#39;CUL_ID_y&#39;, &#39;year&#39;, &#39;auc&#39;, &#39;gdd&#39;, &#39;ndvi&#39;, &#39;doy&#39;, &#39;percentile&#39;, &#39;status&#39;,
+       &#39;pct_diff_from_P80_avg&#39;, &#39;pct_diff_from_P95_avg&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">wkt</span><span class="o">.</span><span class="n">loads</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="s1">&#39;geometry&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">set_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0.1</th>
+      <th>OBJECTID</th>
+      <th>CUL_CAMPAN</th>
+      <th>CUL_ID_x</th>
+      <th>OSA_ID</th>
+      <th>Shape_Leng</th>
+      <th>Shape_Area</th>
+      <th>layer</th>
+      <th>path</th>
+      <th>geometry</th>
+      <th>...</th>
+      <th>CUL_ID_y</th>
+      <th>year</th>
+      <th>auc</th>
+      <th>gdd</th>
+      <th>ndvi</th>
+      <th>doy</th>
+      <th>percentile</th>
+      <th>status</th>
+      <th>pct_diff_from_P80_avg</th>
+      <th>pct_diff_from_P95_avg</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>6207146</td>
+      <td>2020</td>
+      <td>715.156919</td>
+      <td>[   9.30395851   17.41073786   24.87887332   3...</td>
+      <td>[0.2897824 0.2903328 0.2908832 0.2914336 0.291...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>8.0</td>
+      <td>non-bearing</td>
+      <td>-60.213821</td>
+      <td>-65.239412</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>6207146</td>
+      <td>2019</td>
+      <td>802.833826</td>
+      <td>[2.76291555e+00 4.08390350e+00 5.42935321e+00 ...</td>
+      <td>[0.418858  0.419126  0.419662  0.41993   0.421...</td>
+      <td>Index([ 32,  33,  35,  36,  37,  38,  39,  40,...</td>
+      <td>12.0</td>
+      <td>non-bearing</td>
+      <td>-55.336110</td>
+      <td>-60.977828</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>6207146</td>
+      <td>2021</td>
+      <td>828.386356</td>
+      <td>[   7.7562856    14.98012911   21.56475207   2...</td>
+      <td>[0.3588246 0.3588132 0.3588018 0.3587904 0.358...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>14.0</td>
+      <td>non-bearing</td>
+      <td>-53.914551</td>
+      <td>-59.735834</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>6207146</td>
+      <td>2018</td>
+      <td>923.572266</td>
+      <td>[2.14352633e+00 3.38184980e+00 4.79958865e+00 ...</td>
+      <td>[0.4980526 0.4981752 0.4982978 0.4984204 0.498...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  40,  41,...</td>
+      <td>22.0</td>
+      <td>non-bearing</td>
+      <td>-48.619093</td>
+      <td>-55.109271</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>6207146</td>
+      <td>2022</td>
+      <td>1105.964848</td>
+      <td>[   5.91835175   11.64991811   16.86310527   2...</td>
+      <td>[0.2914412 0.2924854 0.2935296 0.2945738 0.295...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>42.0</td>
+      <td>non-bearing</td>
+      <td>-38.472083</td>
+      <td>-46.243981</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4636</th>
+      <td>4636</td>
+      <td>3960341</td>
+      <td>2024</td>
+      <td>6433929</td>
+      <td>48946008</td>
+      <td>711.316223</td>
+      <td>27950.570203</td>
+      <td>Idanha_almonds_2024</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.21549 39.87413, -7.21553 39...</td>
+      <td>...</td>
+      <td>6433929</td>
+      <td>2020</td>
+      <td>1308.877273</td>
+      <td>[   9.30395851   17.41073786   24.87887332   3...</td>
+      <td>[0.69636461 0.69781386 0.69926311 0.70071236 0...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>65.0</td>
+      <td>bearing</td>
+      <td>-27.183498</td>
+      <td>-36.381313</td>
+    </tr>
+    <tr>
+      <th>4637</th>
+      <td>4637</td>
+      <td>3960341</td>
+      <td>2024</td>
+      <td>6433929</td>
+      <td>48946008</td>
+      <td>711.316223</td>
+      <td>27950.570203</td>
+      <td>Idanha_almonds_2024</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.21549 39.87413, -7.21553 39...</td>
+      <td>...</td>
+      <td>6433929</td>
+      <td>2019</td>
+      <td>1316.752251</td>
+      <td>[2.76291555e+00 4.08390350e+00 5.42935321e+00 ...</td>
+      <td>[0.7266768  0.72553578 0.72325374 0.72297023 0...</td>
+      <td>Index([ 32,  33,  35,  36,  37,  38,  39,  40,...</td>
+      <td>66.0</td>
+      <td>bearing</td>
+      <td>-26.745391</td>
+      <td>-35.998546</td>
+    </tr>
+    <tr>
+      <th>4638</th>
+      <td>4638</td>
+      <td>3960341</td>
+      <td>2024</td>
+      <td>6433929</td>
+      <td>48946008</td>
+      <td>711.316223</td>
+      <td>27950.570203</td>
+      <td>Idanha_almonds_2024</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.21549 39.87413, -7.21553 39...</td>
+      <td>...</td>
+      <td>6433929</td>
+      <td>2018</td>
+      <td>1324.672528</td>
+      <td>[2.14352633e+00 3.38184980e+00 4.79958865e+00 ...</td>
+      <td>[0.74448287 0.73728509 0.73008732 0.72288954 0...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  40,  41,...</td>
+      <td>66.0</td>
+      <td>bearing</td>
+      <td>-26.304764</td>
+      <td>-35.613577</td>
+    </tr>
+    <tr>
+      <th>4639</th>
+      <td>4639</td>
+      <td>3960341</td>
+      <td>2024</td>
+      <td>6433929</td>
+      <td>48946008</td>
+      <td>711.316223</td>
+      <td>27950.570203</td>
+      <td>Idanha_almonds_2024</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.21549 39.87413, -7.21553 39...</td>
+      <td>...</td>
+      <td>6433929</td>
+      <td>2023</td>
+      <td>1485.442518</td>
+      <td>[9.83590062e-01 2.58705889e+00 5.51611595e+00 ...</td>
+      <td>[0.80115084 0.78948681 0.77782278 0.77369963 0...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>75.0</td>
+      <td>bearing</td>
+      <td>-17.360680</td>
+      <td>-27.799264</td>
+    </tr>
+    <tr>
+      <th>4640</th>
+      <td>4640</td>
+      <td>3960341</td>
+      <td>2024</td>
+      <td>6433929</td>
+      <td>48946008</td>
+      <td>711.316223</td>
+      <td>27950.570203</td>
+      <td>Idanha_almonds_2024</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.21549 39.87413, -7.21553 39...</td>
+      <td>...</td>
+      <td>6433929</td>
+      <td>2024</td>
+      <td>1833.550564</td>
+      <td>[   6.50548452   13.01491979   18.94146741   2...</td>
+      <td>[0.65595098 0.65335643 0.65076189 0.6520124  0...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>93.0</td>
+      <td>bearing</td>
+      <td>2.005544</td>
+      <td>-10.879285</td>
+    </tr>
+  </tbody>
+</table>
+<p>4641 rows × 21 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;geopandas.geodataframe.GeoDataFrame&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#only plot the bearing fields</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Growth variability&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;pct_diff_from_P95_avg&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0.1</th>
+      <th>OBJECTID</th>
+      <th>CUL_CAMPAN</th>
+      <th>CUL_ID_x</th>
+      <th>OSA_ID</th>
+      <th>Shape_Leng</th>
+      <th>Shape_Area</th>
+      <th>layer</th>
+      <th>path</th>
+      <th>geometry</th>
+      <th>...</th>
+      <th>year</th>
+      <th>auc</th>
+      <th>gdd</th>
+      <th>ndvi</th>
+      <th>doy</th>
+      <th>percentile</th>
+      <th>status</th>
+      <th>pct_diff_from_P80_avg</th>
+      <th>pct_diff_from_P95_avg</th>
+      <th>Growth variability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>2020</td>
+      <td>715.156919</td>
+      <td>[   9.30395851   17.41073786   24.87887332   3...</td>
+      <td>[0.2897824 0.2903328 0.2908832 0.2914336 0.291...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>8.0</td>
+      <td>non-bearing</td>
+      <td>-60.213821</td>
+      <td>-65.239412</td>
+      <td>&lt;bound method NDFrame.copy of 0      -65.23941...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>2019</td>
+      <td>802.833826</td>
+      <td>[2.76291555e+00 4.08390350e+00 5.42935321e+00 ...</td>
+      <td>[0.418858  0.419126  0.419662  0.41993   0.421...</td>
+      <td>Index([ 32,  33,  35,  36,  37,  38,  39,  40,...</td>
+      <td>12.0</td>
+      <td>non-bearing</td>
+      <td>-55.336110</td>
+      <td>-60.977828</td>
+      <td>&lt;bound method NDFrame.copy of 0      -65.23941...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>2021</td>
+      <td>828.386356</td>
+      <td>[   7.7562856    14.98012911   21.56475207   2...</td>
+      <td>[0.3588246 0.3588132 0.3588018 0.3587904 0.358...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>14.0</td>
+      <td>non-bearing</td>
+      <td>-53.914551</td>
+      <td>-59.735834</td>
+      <td>&lt;bound method NDFrame.copy of 0      -65.23941...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>2018</td>
+      <td>923.572266</td>
+      <td>[2.14352633e+00 3.38184980e+00 4.79958865e+00 ...</td>
+      <td>[0.4980526 0.4981752 0.4982978 0.4984204 0.498...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  40,  41,...</td>
+      <td>22.0</td>
+      <td>non-bearing</td>
+      <td>-48.619093</td>
+      <td>-55.109271</td>
+      <td>&lt;bound method NDFrame.copy of 0      -65.23941...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>2022</td>
+      <td>1105.964848</td>
+      <td>[   5.91835175   11.64991811   16.86310527   2...</td>
+      <td>[0.2914412 0.2924854 0.2935296 0.2945738 0.295...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>42.0</td>
+      <td>non-bearing</td>
+      <td>-38.472083</td>
+      <td>-46.243981</td>
+      <td>&lt;bound method NDFrame.copy of 0      -65.23941...</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Growth variability [%]&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;pct_diff_from_P95_avg&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span><span class="o">!=</span><span class="s1">&#39;non-bearing&#39;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0.1</th>
+      <th>OBJECTID</th>
+      <th>CUL_CAMPAN</th>
+      <th>CUL_ID_x</th>
+      <th>OSA_ID</th>
+      <th>Shape_Leng</th>
+      <th>Shape_Area</th>
+      <th>layer</th>
+      <th>path</th>
+      <th>geometry</th>
+      <th>...</th>
+      <th>year</th>
+      <th>auc</th>
+      <th>gdd</th>
+      <th>ndvi</th>
+      <th>doy</th>
+      <th>percentile</th>
+      <th>status</th>
+      <th>pct_diff_from_P80_avg</th>
+      <th>pct_diff_from_P95_avg</th>
+      <th>Growth variability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>2020</td>
+      <td>715.156919</td>
+      <td>[   9.30395851   17.41073786   24.87887332   3...</td>
+      <td>[0.2897824 0.2903328 0.2908832 0.2914336 0.291...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>8.0</td>
+      <td>non-bearing</td>
+      <td>-60.213821</td>
+      <td>-65.239412</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>2019</td>
+      <td>802.833826</td>
+      <td>[2.76291555e+00 4.08390350e+00 5.42935321e+00 ...</td>
+      <td>[0.418858  0.419126  0.419662  0.41993   0.421...</td>
+      <td>Index([ 32,  33,  35,  36,  37,  38,  39,  40,...</td>
+      <td>12.0</td>
+      <td>non-bearing</td>
+      <td>-55.336110</td>
+      <td>-60.977828</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>2021</td>
+      <td>828.386356</td>
+      <td>[   7.7562856    14.98012911   21.56475207   2...</td>
+      <td>[0.3588246 0.3588132 0.3588018 0.3587904 0.358...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>14.0</td>
+      <td>non-bearing</td>
+      <td>-53.914551</td>
+      <td>-59.735834</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>2018</td>
+      <td>923.572266</td>
+      <td>[2.14352633e+00 3.38184980e+00 4.79958865e+00 ...</td>
+      <td>[0.4980526 0.4981752 0.4982978 0.4984204 0.498...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  40,  41,...</td>
+      <td>22.0</td>
+      <td>non-bearing</td>
+      <td>-48.619093</td>
+      <td>-55.109271</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>25737</td>
+      <td>2024</td>
+      <td>6207146</td>
+      <td>9164476</td>
+      <td>1331.235358</td>
+      <td>102332.206794</td>
+      <td>alqueva_almonds_terriak_selection</td>
+      <td>C:/Users/ici-1/Desktop/NADJA/Verrio/Data/Shape...</td>
+      <td>MULTIPOLYGON (((-7.85659 38.0506, -7.85588 38....</td>
+      <td>...</td>
+      <td>2022</td>
+      <td>1105.964848</td>
+      <td>[   5.91835175   11.64991811   16.86310527   2...</td>
+      <td>[0.2914412 0.2924854 0.2935296 0.2945738 0.295...</td>
+      <td>Index([ 32,  33,  34,  35,  36,  37,  38,  39,...</td>
+      <td>42.0</td>
+      <td>non-bearing</td>
+      <td>-38.472083</td>
+      <td>-46.243981</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 22 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@interact</span><span class="p">(</span><span class="n">year</span><span class="o">=</span><span class="n">widgets</span><span class="o">.</span><span class="n">IntSlider</span><span class="p">(</span>
+    <span class="nb">min</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="nb">max</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()))</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">show_map</span><span class="p">(</span><span class="n">year</span><span class="p">):</span>
+    <span class="n">filtered</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">year</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1"># Create display column for tooltip with NaN handling</span>
+    <span class="n">filtered</span><span class="p">[</span><span class="s2">&quot;pct_diff_display&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">filtered</span><span class="p">[</span><span class="s2">&quot;Growth variability&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+        <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s2">&quot;non-bearing&quot;</span> <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">else</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Ensure GeoDataFrame with CRS</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filtered</span><span class="p">,</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">):</span>
+        <span class="n">filtered</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">filtered</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="s1">&#39;geometry&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">filtered</span><span class="o">.</span><span class="n">crs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">filtered</span><span class="o">.</span><span class="n">set_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Fix centroid warning using projected CRS</span>
+    <span class="n">projected</span> <span class="o">=</span> <span class="n">filtered</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">3857</span><span class="p">)</span>
+    <span class="n">centroids</span> <span class="o">=</span> <span class="n">projected</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">centroid</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="n">centroids</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">4326</span><span class="p">)</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">centroids</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="n">epsg</span><span class="o">=</span><span class="mi">4326</span><span class="p">)</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+    <span class="c1"># Define red → yellow → green ramp</span>
+    <span class="n">colormap</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">LinearColormap</span><span class="p">(</span>
+        <span class="n">colors</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="s2">&quot;green&quot;</span><span class="p">],</span>
+        <span class="n">vmin</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Growth variability&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+        <span class="n">vmax</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Growth variability&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="p">)</span>
+    <span class="n">colormap</span><span class="o">.</span><span class="n">caption</span> <span class="o">=</span> <span class="s2">&quot;Growth variability&quot;</span>
+
+    <span class="c1"># Style function for color mapping and NaNs</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">style_function</span><span class="p">(</span><span class="n">feature</span><span class="p">):</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">feature</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;Growth variability&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">value</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">or</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">value</span><span class="p">):</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="s1">&#39;none&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mi">0</span>
+            <span class="p">}</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="n">colormap</span><span class="p">(</span><span class="n">value</span><span class="p">),</span>
+                <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.6</span>
+            <span class="p">}</span>
+
+    <span class="c1"># Tooltip using preprocessed display column</span>
+    <span class="n">tooltip</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">GeoJsonTooltip</span><span class="p">(</span>
+        <span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;pct_diff_display&quot;</span><span class="p">],</span>
+        <span class="n">aliases</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Growth variability&quot;</span><span class="p">],</span>
+        <span class="n">localize</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">sticky</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">style</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;background-color: white; color: #333; font-family: arial; font-size: 12px; padding: 5px;&quot;</span><span class="p">)</span>
+    <span class="p">)</span>
+
+    <span class="c1"># Add GeoJson to map</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">tiles</span><span class="o">=</span><span class="s2">&quot;CartoDB positron&quot;</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">tiles</span><span class="o">=</span><span class="s2">&quot;CartoDB positron&quot;</span><span class="p">)</span>
+
+    <span class="n">folium</span><span class="o">.</span><span class="n">GeoJson</span><span class="p">(</span>
+        <span class="n">filtered</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;fields&quot;</span><span class="p">,</span>
+        <span class="n">style_function</span><span class="o">=</span><span class="n">style_function</span><span class="p">,</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="n">tooltip</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="n">colormap</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">LayerControl</span><span class="p">()</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "e8e7e9b14b5842659eebedb3a1e0b3d3", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">create_map_for_year</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">save_html</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">filtered</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">year</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+    <span class="c1"># Ensure it&#39;s a valid GeoDataFrame with CRS</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">filtered</span><span class="p">,</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">):</span>
+        <span class="n">filtered</span> <span class="o">=</span> <span class="n">gpd</span><span class="o">.</span><span class="n">GeoDataFrame</span><span class="p">(</span><span class="n">filtered</span><span class="p">,</span> <span class="n">geometry</span><span class="o">=</span><span class="s1">&#39;geometry&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">filtered</span><span class="o">.</span><span class="n">crs</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">filtered</span><span class="o">.</span><span class="n">set_crs</span><span class="p">(</span><span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Calculate centroids</span>
+    <span class="n">centroids</span> <span class="o">=</span> <span class="n">filtered</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">centroid</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="n">centroids</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">centroids</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+    <span class="c1"># Set up colormap</span>
+    <span class="n">values</span> <span class="o">=</span> <span class="n">filtered</span><span class="p">[</span><span class="s1">&#39;pct_diff_from_P95_avg&#39;</span><span class="p">]</span>
+    <span class="n">colormap</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">YlOrRd_09</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">values</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+    <span class="n">colormap</span><span class="o">.</span><span class="n">caption</span> <span class="o">=</span> <span class="s2">&quot;Pct diff from P95 avg&quot;</span>
+
+    <span class="c1"># Create folium map</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">tiles</span><span class="o">=</span><span class="s2">&quot;CartoDB positron&quot;</span><span class="p">)</span>
+
+    <span class="n">folium</span><span class="o">.</span><span class="n">GeoJson</span><span class="p">(</span>
+        <span class="n">filtered</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;fields&quot;</span><span class="p">,</span>
+        <span class="n">style_function</span><span class="o">=</span><span class="k">lambda</span> <span class="n">feature</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="n">colormap</span><span class="p">(</span><span class="n">feature</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;pct_diff_from_P95_avg&#39;</span><span class="p">]),</span>
+            <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.6</span>
+        <span class="p">},</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">GeoJsonTooltip</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;pct_diff_from_P95_avg&quot;</span><span class="p">])</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="n">colormap</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">LayerControl</span><span class="p">()</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">save_html</span><span class="p">:</span>
+        <span class="n">m</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;map_</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">.html&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Saved map to map_</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">.html&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">m</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">yr</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">create_map_for_year</span><span class="p">(</span><span class="n">yr</span><span class="p">,</span> <span class="n">save_html</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your GeoDataFrame must have these columns</span>
+<span class="c1"># - &#39;geometry&#39; (valid geometries)</span>
+<span class="c1"># - &#39;year&#39;</span>
+<span class="c1"># - &#39;pct_diff_from_P95_avg&#39;</span>
+
+<span class="kn">from</span><span class="w"> </span><span class="nn">folium</span><span class="w"> </span><span class="kn">import</span> <span class="n">Element</span>
+
+<span class="c1"># Get center of map from entire dataset</span>
+<span class="n">centroids</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">centroid</span>
+<span class="n">lat</span> <span class="o">=</span> <span class="n">centroids</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">lon</span> <span class="o">=</span> <span class="n">centroids</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="c1"># Create base map</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">tiles</span><span class="o">=</span><span class="s2">&quot;CartoDB positron&quot;</span><span class="p">)</span>
+
+<span class="c1"># Colormap setup</span>
+<span class="n">all_values</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;pct_diff_from_P95_avg&#39;</span><span class="p">]</span>
+<span class="n">colormap</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">linear</span><span class="o">.</span><span class="n">YlOrRd_09</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">all_values</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">all_values</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
+<span class="n">colormap</span><span class="o">.</span><span class="n">caption</span> <span class="o">=</span> <span class="s2">&quot;Pct diff from P95 avg&quot;</span>
+<span class="n">colormap</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Dictionary to keep layers by year</span>
+<span class="n">year_layers</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()):</span>
+    <span class="n">filtered</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">year</span><span class="p">]</span>
+
+    <span class="n">layer</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">FeatureGroup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">year</span><span class="p">),</span> <span class="n">show</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">folium</span><span class="o">.</span><span class="n">GeoJson</span><span class="p">(</span>
+        <span class="n">filtered</span><span class="p">,</span>
+        <span class="n">name</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Fields </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+        <span class="n">style_function</span><span class="o">=</span><span class="k">lambda</span> <span class="n">feature</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;fillColor&#39;</span><span class="p">:</span> <span class="n">colormap</span><span class="p">(</span><span class="n">feature</span><span class="p">[</span><span class="s1">&#39;properties&#39;</span><span class="p">][</span><span class="s1">&#39;pct_diff_from_P95_avg&#39;</span><span class="p">]),</span>
+            <span class="s1">&#39;color&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;weight&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s1">&#39;fillOpacity&#39;</span><span class="p">:</span> <span class="mf">0.6</span>
+        <span class="p">},</span>
+        <span class="n">tooltip</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">GeoJsonTooltip</span><span class="p">(</span><span class="n">fields</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;pct_diff_from_P95_avg&quot;</span><span class="p">])</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
+
+    <span class="n">layer</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+    <span class="n">year_layers</span><span class="p">[</span><span class="n">year</span><span class="p">]</span> <span class="o">=</span> <span class="n">layer</span>
+
+<span class="c1"># Activate only the first year</span>
+<span class="n">first_year</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">year_layers</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">year_layers</span><span class="p">[</span><span class="n">first_year</span><span class="p">]</span><span class="o">.</span><span class="n">show</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Layer control</span>
+<span class="n">folium</span><span class="o">.</span><span class="n">LayerControl</span><span class="p">(</span><span class="n">collapsed</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Create the dropdown HTML separately</span>
+<span class="n">dropdown_options</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="sa">f</span><span class="s1">&#39;&lt;option value=&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&quot;&gt;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s1">&lt;/option&gt;&#39;</span> <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">year_layers</span><span class="o">.</span><span class="n">keys</span><span class="p">())])</span>
+
+<span class="n">dropdown_script</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">&lt;select id=&quot;yearDropdown&quot; onchange=&quot;switchYear(this.value)&quot;</span>
+<span class="s2">        style=&quot;position: fixed; top: 10px; left: 50px; z-index: 9999;&quot;&gt;</span>
+<span class="s2">  </span><span class="si">{options}</span>
+<span class="s2">&lt;/select&gt;</span>
+
+<span class="s2">&lt;script&gt;</span>
+<span class="s2">    function switchYear(year) {{</span>
+<span class="s2">        const yearLayers = </span><span class="si">{years}</span><span class="s2">;</span>
+<span class="s2">        map.eachLayer(function(layer) {{</span>
+<span class="s2">            if (layer.options &amp;&amp; layer.options.name &amp;&amp; yearLayers.includes(layer.options.name)) {{</span>
+<span class="s2">                if (layer.options.name === year) {{</span>
+<span class="s2">                    map.addLayer(layer);</span>
+<span class="s2">                }} else {{</span>
+<span class="s2">                    map.removeLayer(layer);</span>
+<span class="s2">                }}</span>
+<span class="s2">            }}</span>
+<span class="s2">        }});</span>
+<span class="s2">    }}</span>
+<span class="s2">&lt;/script&gt;</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+    <span class="n">options</span><span class="o">=</span><span class="n">dropdown_options</span><span class="p">,</span>
+    <span class="n">years</span><span class="o">=</span><span class="nb">str</span><span class="p">([</span><span class="nb">str</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">year_layers</span><span class="o">.</span><span class="n">keys</span><span class="p">()])</span>  <span class="c1"># safely embed year list as JS array</span>
+<span class="p">)</span>
+
+<span class="c1"># Add to map</span>
+<span class="n">m</span><span class="o">.</span><span class="n">get_root</span><span class="p">()</span><span class="o">.</span><span class="n">html</span><span class="o">.</span><span class="n">add_child</span><span class="p">(</span><span class="n">Element</span><span class="p">(</span><span class="n">dropdown_script</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\ici-1\AppData\Local\Temp\ipykernel_15084\4046819578.py:9: UserWarning: Geometry is in a geographic CRS. Results from &#39;centroid&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
+
+  centroids = df.geometry.centroid
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;branca.element.Element at 0x20d8cfa5cf0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save the map to HTML</span>
+<span class="n">m</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;interactive_map_with_dropdown.html&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Map saved to interactive_map_with_dropdown.html&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Map saved to interactive_map_with_dropdown.html
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Orchard_Water_Use.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Almond Orchard Water Use</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Datasets.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Available Open Datasets</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Agua Sabia for Verrio
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
